@@ -61,7 +61,7 @@ jobs:
     - name: Generate YARA rules
       if: steps.cached-vdm.outputs.cache-hit != 'true' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
       run: |
-        poetry run python -m defender2yara --cache ./cache -o ./rules
+        poetry run python -m defender2yara --header_check --cache ./cache -o ./rules
 
     - name: Deploy on yara-rules branch
       if: steps.cached-vdm.outputs.cache-hit != 'true' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
