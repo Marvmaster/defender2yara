@@ -774,6 +774,29 @@ rule Trojan_Win32_KillMBR_ARAZ_2147928457_0
         severity = "Critical"
         info = "MTB: Microsoft Threat Behavior"
         signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
+        threshold = "4"
+        strings_accuracy = "High"
+    strings:
+        $x_2_1 = "Your disk have a lock!Please input the unlock password!" ascii //weight: 2
+        $x_2_2 = "@\\\\.\\\\physicaldrive0" ascii //weight: 2
+    condition:
+        (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
+        (all of ($x*))
+}
+
+rule Trojan_Win32_KillMBR_ARAZ_2147928457_1
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:Win32/KillMBR.ARAZ!MTB"
+        threat_id = "2147928457"
+        type = "Trojan"
+        platform = "Win32: Windows 32-bit platform"
+        family = "KillMBR"
+        severity = "Critical"
+        info = "MTB: Microsoft Threat Behavior"
+        signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
         threshold = "8"
         strings_accuracy = "High"
     strings:
@@ -787,7 +810,7 @@ rule Trojan_Win32_KillMBR_ARAZ_2147928457_0
         (all of ($x*))
 }
 
-rule Trojan_Win32_KillMBR_ARAZ_2147928457_1
+rule Trojan_Win32_KillMBR_ARAZ_2147928457_2
 {
     meta:
         author = "defender2yara"
