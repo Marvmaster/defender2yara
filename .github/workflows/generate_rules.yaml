@@ -2,7 +2,7 @@ name: Generate YARA rules from latest Microsoft Defender AV Signature
 
 on:
   schedule:
-    - cron: "0,30 * * * *" # every 30 minutes
+    - cron: "0 */2 * * *" # every two hours
   push:
     branches:
       - main
