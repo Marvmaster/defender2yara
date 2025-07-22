@@ -9,7 +9,7 @@ rule Trojan_Win64_Sainbox_A_2147945808_0
         family = "Sainbox"
         severity = "Critical"
         signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
-        threshold = "104"
+        threshold = "105"
         strings_accuracy = "Low"
     strings:
         $x_100_1 = {f1 d5 00 fa 4c 62 cc f4 0f 0b}  //weight: 100, accuracy: High
@@ -27,7 +27,7 @@ rule Trojan_Win64_Sainbox_A_2147945808_0
         (filesize < 20MB) and
         (uint16(0) == 0x5a4d) and
         (
-            ((1 of ($x_100_*) and 4 of ($x_1_*))) or
+            ((1 of ($x_100_*) and 5 of ($x_1_*))) or
             (all of ($x*))
         )
 }
