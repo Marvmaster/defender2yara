@@ -6231,3 +6231,28 @@ rule Trojan_MSIL_Taskun_2147947156_0
         (all of ($x*))
 }
 
+rule Trojan_MSIL_Taskun_APT_2147947739_0
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:MSIL/Taskun.APT!MTB"
+        threat_id = "2147947739"
+        type = "Trojan"
+        platform = "MSIL: .NET intermediate language scripts"
+        family = "Taskun"
+        severity = "Critical"
+        info = "MTB: Microsoft Threat Behavior"
+        signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
+        threshold = "4"
+        strings_accuracy = "High"
+    strings:
+        $x_1_1 = "PharmaCare Manager.dll" ascii //weight: 1
+        $x_1_2 = "HIPAA-compliant pharmacy management" ascii //weight: 1
+        $x_1_3 = "MedTech Solutions Inc" ascii //weight: 1
+        $x_1_4 = "regulated healthcare environments" ascii //weight: 1
+    condition:
+        (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
+        (all of ($x*))
+}
+
