@@ -21,3 +21,24 @@ rule HackTool_Linux_LinPeas_D_2147911936_0
         (all of ($x*))
 }
 
+rule HackTool_Linux_LinPeas_MR7_2147948655_0
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "HackTool:Linux/LinPeas.MR7"
+        threat_id = "2147948655"
+        type = "HackTool"
+        platform = "Linux: Linux platform"
+        family = "LinPeas"
+        severity = "High"
+        signature_type = "SIGNATURE_TYPE_ELFHSTR_EXT"
+        threshold = "2"
+        strings_accuracy = "High"
+    strings:
+        $x_2_1 = "/PEASS-ng/PEASS-ng/" ascii //weight: 2
+    condition:
+        (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
+        (all of ($x*))
+}
+
