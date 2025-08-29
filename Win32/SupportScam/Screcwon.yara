@@ -78,6 +78,7 @@ rule SupportScam_Win32_Screcwon_MD_2147947634_0
         $x_30_17 = ".viewyourstatementonline.com" ascii //weight: 30
         $x_30_18 = "preyinthewild.online" ascii //weight: 30
         $x_30_19 = "download.e-statement.estate" ascii //weight: 30
+        $x_30_20 = "hp.noleggiodisciza.com" ascii //weight: 30
     condition:
         (filesize < 20MB) and
         (uint16(0) == 0x5a4d) and
