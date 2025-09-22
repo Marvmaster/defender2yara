@@ -8102,8 +8102,8 @@ rule Trojan_Win32_Guloader_KJ_2147952704_0
     strings:
         $x_1_1 = "brawnily bifoil afskederne" ascii //weight: 1
         $x_1_2 = "enharmonic skriveunderlag offer" ascii //weight: 1
-        $x_1_3 = "Oxidizables.Hoo" ascii //weight: 1
-        $x_1_4 = "Bijectively.cov" ascii //weight: 1
+        $x_1_3 = "unyachtsmanlike\\calef.bin" ascii //weight: 1
+        $x_1_4 = "svinefarmen.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
         (uint16(0) == 0x5a4d) and
