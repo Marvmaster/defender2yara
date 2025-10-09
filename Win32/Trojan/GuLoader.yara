@@ -5256,6 +5256,35 @@ rule Trojan_Win32_GuLoader_NS_2147947244_11
         threshold = "8"
         strings_accuracy = "High"
     strings:
+        $x_1_1 = "udvindinger.kon" ascii //weight: 1
+        $x_1_2 = "envapours waylaidlessness histopathology" ascii //weight: 1
+        $x_1_3 = "prosectorium.els" ascii //weight: 1
+        $x_1_4 = "dikteringens.tra" ascii //weight: 1
+        $x_1_5 = "arveretsligt.tri" ascii //weight: 1
+        $x_1_6 = "debatfilmenes.exe" ascii //weight: 1
+        $x_1_7 = "brnevenners" ascii //weight: 1
+        $x_1_8 = "trinflger harpoons checkmates" ascii //weight: 1
+    condition:
+        (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
+        (all of ($x*))
+}
+
+rule Trojan_Win32_GuLoader_NS_2147947244_12
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:Win32/GuLoader.NS!MTB"
+        threat_id = "2147947244"
+        type = "Trojan"
+        platform = "Win32: Windows 32-bit platform"
+        family = "GuLoader"
+        severity = "Critical"
+        info = "MTB: Microsoft Threat Behavior"
+        signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
+        threshold = "8"
+        strings_accuracy = "High"
+    strings:
         $x_1_1 = "depending dyds moorage" ascii //weight: 1
         $x_1_2 = "dt talehandlinger" ascii //weight: 1
         $x_1_3 = "ristedes authoritarianism" ascii //weight: 1
@@ -5270,7 +5299,7 @@ rule Trojan_Win32_GuLoader_NS_2147947244_11
         (all of ($x*))
 }
 
-rule Trojan_Win32_GuLoader_NS_2147947244_12
+rule Trojan_Win32_GuLoader_NS_2147947244_13
 {
     meta:
         author = "defender2yara"
@@ -5299,7 +5328,7 @@ rule Trojan_Win32_GuLoader_NS_2147947244_12
         (all of ($x*))
 }
 
-rule Trojan_Win32_GuLoader_NS_2147947244_13
+rule Trojan_Win32_GuLoader_NS_2147947244_14
 {
     meta:
         author = "defender2yara"
