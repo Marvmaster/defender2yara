@@ -945,6 +945,29 @@ rule Trojan_MSIL_LummaStealer_NL_2147903607_2
         severity = "Critical"
         info = "MTB: Microsoft Threat Behavior"
         signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
+        threshold = "3"
+        strings_accuracy = "High"
+    strings:
+        $x_2_1 = {02 7b 05 00 00 04 26 16 0b de 34 08 02 7b 06 00 00 04 20 18 01 00 00 14 14 14 6f 1f 00 00 0a 26 17 0b}  //weight: 2, accuracy: High
+        $x_1_2 = {28 1c 00 00 0a 02 7b 05 00 00 04 16 6f 1d 00 00 0a 0c 08 14 28 1e 00 00 0a}  //weight: 1, accuracy: High
+    condition:
+        (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
+        (all of ($x*))
+}
+
+rule Trojan_MSIL_LummaStealer_NL_2147903607_3
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:MSIL/LummaStealer.NL!MTB"
+        threat_id = "2147903607"
+        type = "Trojan"
+        platform = "MSIL: .NET intermediate language scripts"
+        family = "LummaStealer"
+        severity = "Critical"
+        info = "MTB: Microsoft Threat Behavior"
+        signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
         threshold = "6"
         strings_accuracy = "Low"
     strings:
@@ -956,7 +979,7 @@ rule Trojan_MSIL_LummaStealer_NL_2147903607_2
         (all of ($x*))
 }
 
-rule Trojan_MSIL_LummaStealer_NL_2147903607_3
+rule Trojan_MSIL_LummaStealer_NL_2147903607_4
 {
     meta:
         author = "defender2yara"
@@ -979,7 +1002,7 @@ rule Trojan_MSIL_LummaStealer_NL_2147903607_3
         (all of ($x*))
 }
 
-rule Trojan_MSIL_LummaStealer_NL_2147903607_4
+rule Trojan_MSIL_LummaStealer_NL_2147903607_5
 {
     meta:
         author = "defender2yara"
@@ -1002,7 +1025,7 @@ rule Trojan_MSIL_LummaStealer_NL_2147903607_4
         (all of ($x*))
 }
 
-rule Trojan_MSIL_LummaStealer_NL_2147903607_5
+rule Trojan_MSIL_LummaStealer_NL_2147903607_6
 {
     meta:
         author = "defender2yara"
@@ -1026,7 +1049,7 @@ rule Trojan_MSIL_LummaStealer_NL_2147903607_5
         (all of ($x*))
 }
 
-rule Trojan_MSIL_LummaStealer_NL_2147903607_6
+rule Trojan_MSIL_LummaStealer_NL_2147903607_7
 {
     meta:
         author = "defender2yara"
