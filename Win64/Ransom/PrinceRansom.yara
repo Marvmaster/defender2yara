@@ -43,10 +43,11 @@ rule Ransom_Win64_PrinceRansom_MX_2147935759_0
         $x_1_2 = "Go build" ascii //weight: 1
         $x_1_3 = "EncryptDirectory" ascii //weight: 1
         $x_1_4 = "setWallpaper" ascii //weight: 1
+        $x_1_5 = "CYB3R L0CK3R RANSOMWARE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
         (uint16(0) == 0x5a4d) and
-        (all of ($x*))
+        (4 of ($x*))
 }
 
 rule Ransom_Win64_PrinceRansom_PA_2147947093_0
