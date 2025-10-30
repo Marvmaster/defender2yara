@@ -1,12 +1,12 @@
-rule Trojan_Linux_Gorm_HAB_2147956370_0
+rule Trojan_Linux_GlassWorm_HAB_2147956442_0
 {
     meta:
         author = "defender2yara"
-        detection_name = "Trojan:Linux/Gorm.HAB!MTB"
-        threat_id = "2147956370"
+        detection_name = "Trojan:Linux/GlassWorm.HAB!MTB"
+        threat_id = "2147956442"
         type = "Trojan"
         platform = "Linux: Linux platform"
-        family = "Gorm"
+        family = "GlassWorm"
         severity = "Critical"
         info = "MTB: Microsoft Threat Behavior"
         signature_type = "SIGNATURE_TYPE_ELFHSTR_EXT"

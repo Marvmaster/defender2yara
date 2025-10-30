@@ -1,12 +1,12 @@
-rule Trojan_MacOS_Gorm_HAB_2147956371_0
+rule Trojan_MacOS_GlassWorm_HAB_2147956443_0
 {
     meta:
         author = "defender2yara"
-        detection_name = "Trojan:MacOS/Gorm.HAB!MTB"
-        threat_id = "2147956371"
+        detection_name = "Trojan:MacOS/GlassWorm.HAB!MTB"
+        threat_id = "2147956443"
         type = "Trojan"
         platform = "MacOS: "
-        family = "Gorm"
+        family = "GlassWorm"
         severity = "Critical"
         info = "MTB: Microsoft Threat Behavior"
         signature_type = "SIGNATURE_TYPE_MACHOHSTR_EXT"
